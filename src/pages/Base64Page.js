@@ -27,17 +27,12 @@ class Base64Page extends Component {
   }
 
   textAreaChange(e) {
-    if (this.state.encode) {
       this.setState({
         input: e.target.value,
-        output: base64.encode(e.target.value)
+        output: this.state.encode
+        ? base64.encode(e.target.value)
+        : base64.decode(e.target.value)
       });
-    } else {
-      this.setState({
-        input: e.target.value,
-        output: base64.decode(e.target.value)
-      });
-    }
   }
 
   render() {
