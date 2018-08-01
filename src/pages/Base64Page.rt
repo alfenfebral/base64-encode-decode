@@ -1,0 +1,10 @@
+<div>
+  <div class="menu-toggle">
+    <button class="menu" rt-class="{'menu-active': this.state.encode}" onClick="() => this.changeType()">Encode</button>
+    <button class="menu" rt-class="{'menu-active': !this.state.encode}" onClick="() => this.changeType()">Decode</button>
+  </div>
+  <textarea class="convert-area" rows="4" cols="50" class="input" onChange="{this.textAreaChange}" value="{this.state.input}">
+  </textarea>
+  <textarea class="convert-area" rows="4" cols="50" class="output" value="{this.state.output}">
+  </textarea>
+</div>
